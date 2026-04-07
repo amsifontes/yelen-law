@@ -1,0 +1,7 @@
+baseURL = "https://browardimmigrationlaw.com/"
+languageCode = "en-us"
+title = "Yelen Law Offices, P.A. — Immigration & Traffic Law"
+
+[params]
+  description = "Over 25 years of dedicated legal representation in Immigration and Traffic Law. Serving Weston, Broward County, and clients nationwide."
+  author = "Yelen Law Offices, P.A."

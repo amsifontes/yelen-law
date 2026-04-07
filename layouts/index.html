@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ with .Site.Title }}{{ . }}{{ else }}Yelen Law Offices, P.A. — Immigration & Traffic Law{{ end }}</title>
+  <meta name="description" content="Yelen Law Offices, P.A. — Over 25 years of dedicated legal representation in Immigration and Traffic Law. Serving clients in Weston, Broward County, and nationwide. Call (954) 228-4466.">
+  <meta name="keywords" content="immigration lawyer, traffic attorney, Weston FL, Broward County, CDL defense, deportation defense, family immigration, naturalization, Howard Yelen">
+  <meta property="og:title" content="Yelen Law Offices, P.A. — Immigration & Traffic Law">
+  <meta property="og:description" content="Over 25 years of dedicated legal representation. Creative immigration strategies and nationwide traffic defense.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="{{ .Site.BaseURL }}">
+  <style>
+    /* ═══════════════════════════════════════════
+       YELEN LAW — Institutional Authority Theme
+       ═══════════════════════════════════════════ */
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    :root {
+      --navy-deep: #0a1628;
+      --navy: #0f2040;
+      --navy-mid: #162d54;
+      --navy-light: #1e3a6a;
+      --gold: #c8a14e;
+      --gold-light: #dbb866;
+      --gold-pale: #f5e6b8;
+      --cream: #faf8f4;
+      --cream-dark: #f0ece4;
+      --white: #ffffff;
+      --text-dark: #1a1a1a;
+      --text-mid: #4a4a4a;
+      --text-light: #7a7a7a;
+      --serif: Georgia, 'Times New Roman', 'Palatino Linotype', serif;
+      --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Animations ────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideRule {
+      from { width: 0; }
+      to { width: 60px; }
+    }
+    @keyframes expandWidth {
+      from { transform: scaleX(0); }
+      to { transform: scaleX(1); }
+    }
+
+    .animate-up {
+      animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.35s; }
+    .delay-4 { animation-delay: 0.5s; }
+    .delay-5 { animation-delay: 0.65s; }
+
+    /* ── Navigation ────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: var(--navy-deep);
+      border-bottom: 1px solid rgba(200, 161, 78, 0.15);
+      animation: fadeIn 0.5s ease both;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-brand {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .nav-brand span {
+      color: rgba(255,255,255,0.5);
+      font-weight: 400;
+      font-size: 0.85rem;
+      margin-left: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold);
+      color: var(--navy-deep) !important;
+      padding: 8px 18px;
+      font-weight: 600;
+      font-size: 0.8rem !important;
+      letter-spacing: 0.05em !important;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--gold-light) !important;
+      color: var(--navy-deep) !important;
+      transform: translateY(-1px);
+    }
+
+    /* ── Hero ──────────────────────────────── */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--navy-deep);
+      overflow: hidden;
+      padding: 120px 24px 80px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          115deg,
+          transparent,
+          transparent 60px,
+          rgba(200, 161, 78, 0.015) 60px,
+          rgba(200, 161, 78, 0.015) 61px
+        );
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.3;
+    }
+    .hero-content {
+      max-width: 800px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-monogram {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      border: 2px solid var(--gold);
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .hero-monogram::before,
+    .hero-monogram::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.3;
+    }
+    .hero-monogram::before { right: calc(100% + 12px); }
+    .hero-monogram::after { left: calc(100% + 12px); }
+
+    .hero-firm {
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .hero-sub {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+    .hero-rule {
+      width: 60px;
+      height: 2px;
+      background: var(--gold);
+      margin: 0 auto 28px;
+      animation: slideRule 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+    }
+    .hero-tagline {
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+      color: rgba(255,255,255,0.75);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+    .hero-tagline em {
+      color: var(--gold-light);
+      font-style: normal;
+      font-weight: 700;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold);
+      color: var(--navy-deep);
+      padding: 14px 32px;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--white);
+      padding: 14px 32px;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+    .hero-credentials {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .hero-badge strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .hero-badge-sep {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── Section commons ──────────────────── */
+    .section {
+      padding: 96px 24px;
+    }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      color: var(--navy-deep);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .section-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 24px;
+    }
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* dark section variant */
+    .section--dark {
+      background: var(--navy-deep);
+      position: relative;
+    }
+    .section--dark::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          -65deg,
+          transparent,
+          transparent 80px,
+          rgba(200, 161, 78, 0.012) 80px,
+          rgba(200, 161, 78, 0.012) 81px
+        );
+      pointer-events: none;
+    }
+    .section--dark .section-label { color: var(--gold-light); }
+    .section--dark .section-title { color: var(--white); }
+    .section--dark .section-desc { color: rgba(255,255,255,0.6); }
+
+    /* cream variant */
+    .section--cream {
+      background: var(--cream-dark);
+    }
+
+    /* ── Practice Areas ───────────────────── */
+    .practice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .practice-card {
+      background: var(--white);
+      border: 1px solid rgba(10, 22, 40, 0.06);
+      padding: 40px 36px;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .practice-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(10, 22, 40, 0.08);
+    }
+    .practice-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+    .practice-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--navy-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .practice-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .practice-card h3 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--navy-deep);
+      margin-bottom: 6px;
+    }
+    .practice-card .practice-scope {
+      font-size: 0.78rem;
+      color: var(--gold);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .practice-card p {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .practice-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 16px;
+    }
+    .practice-list li {
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .practice-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    /* ── Credentials ──────────────────────── */
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .credential {
+      text-align: center;
+      padding: 32px 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(200, 161, 78, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+    .credential-value {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .credential-label {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+    .credential-detail {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      margin-top: 6px;
+    }
+
+    /* ── About ─────────────────────────────── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 64px;
+      align-items: start;
+      margin-top: 48px;
+    }
+    .about-details h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      color: var(--navy-deep);
+      margin-bottom: 16px;
+    }
+    .about-details p {
+      font-size: 0.95rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .about-quote {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--navy);
+      font-style: italic;
+      line-height: 1.65;
+      padding: 28px 0 28px 24px;
+      border-left: 3px solid var(--gold);
+      margin: 24px 0;
+    }
+    .about-sidebar {
+      background: var(--navy-deep);
+      padding: 36px;
+      position: relative;
+    }
+    .about-sidebar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+    .about-sidebar h4 {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .about-item {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .about-item:last-child { border-bottom: none; }
+    .about-item dt {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .about-item dd {
+      font-size: 0.95rem;
+      color: var(--white);
+      font-weight: 500;
+    }
+    .about-item dd.gold { color: var(--gold); }
+
+    /* ── Contact ───────────────────────────── */
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .contact-card {
+      background: var(--white);
+      border: 1px solid rgba(10, 22, 40, 0.06);
+      padding: 32px 28px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(10, 22, 40, 0.08);
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+    .contact-card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--navy-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+    .contact-card-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .contact-card-label {
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .contact-card a {
+      text-decoration: none;
+      color: var(--text-dark);
+      transition: color 0.2s;
+    }
+    .contact-card a:hover { color: var(--gold); }
+    .contact-phone {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      color: var(--navy-deep);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      display: block;
+    }
+    .contact-detail {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+    .contact-sub {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+    .contact-lang {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 32px;
+      padding: 10px 20px;
+      background: var(--cream-dark);
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+    .contact-lang strong { color: var(--navy); }
+
+    /* ── Footer ────────────────────────────── */
+    .footer {
+      background: var(--navy-deep);
+      padding: 48px 24px;
+      border-top: 1px solid rgba(200, 161, 78, 0.15);
+    }
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin-bottom: 16px;
+      letter-spacing: 0.03em;
+    }
+    .footer-disclaimer {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto 16px;
+    }
+    .footer-copy {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Mobile hamburger ─────────────────── */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      margin: 5px 0;
+      transition: 0.2s;
+    }
+
+    /* ── Responsive ────────────────────────── */
+    @media (max-width: 900px) {
+      .practice-grid { grid-template-columns: 1fr; }
+      .credentials-grid { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .contact-cards { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+    }
+
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .nav-toggle { display: block; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--navy-deep);
+        padding: 16px 24px 24px;
+        gap: 12px;
+        border-bottom: 1px solid rgba(200, 161, 78, 0.15);
+      }
+      .hero { min-height: auto; padding: 120px 20px 64px; }
+      .hero-firm { font-size: 2rem; }
+      .hero-credentials { gap: 12px; }
+      .hero-badge-sep { display: none; }
+      .section { padding: 64px 20px; }
+      .practice-list { grid-template-columns: 1fr; }
+      .credentials-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .credential { padding: 20px 12px; }
+      .credential-value { font-size: 1.6rem; }
+      .about-sidebar { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand">Yelen Law<span>Offices, P.A.</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#practice">Practice Areas</a></li>
+        <li><a href="#credentials">Credentials</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="tel:+19542284466" class="nav-cta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          (954) 228-4466
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-monogram animate-up delay-1">YL</div>
+      <div class="hero-sub animate-up delay-2">Attorneys at Law&ensp;&middot;&ensp;Est. 1996</div>
+      <h1 class="hero-firm animate-up delay-2">Yelen Law Offices, P.A.</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-tagline animate-up delay-3">
+        Over <em>25 years</em> of dedicated legal representation in
+        Immigration&nbsp;&&nbsp;Traffic&nbsp;Law. Creative strategies.
+        Proven&nbsp;results. Clients treated like&nbsp;family.
+      </p>
+      <div class="hero-actions animate-up delay-4">
+        <a href="tel:+19542284466" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="#contact" class="btn-secondary">Free Consultation</a>
+      </div>
+      <div class="hero-credentials animate-up delay-5">
+        <span class="hero-badge"><strong>AV Rated</strong>&ensp;Peer Review</span>
+        <span class="hero-badge-sep"></span>
+        <span class="hero-badge"><strong>5.0 &#9733;</strong>&ensp;Avvo Rating</span>
+        <span class="hero-badge-sep"></span>
+        <span class="hero-badge"><strong>AILA</strong>&ensp;Member Since 2002</span>
+        <span class="hero-badge-sep"></span>
+        <span class="hero-badge"><strong>Se Habla</strong>&ensp;Espa&ntilde;ol</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Practice Areas ═══ -->
+  <section class="section" id="practice">
+    <div class="section-inner">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Practice Areas</h2>
+      <div class="section-rule"></div>
+      <p class="section-desc">Comprehensive legal representation across immigration and traffic law, guided by creative strategies and a commitment to achieving the best possible outcome for every client.</p>
+
+      <div class="practice-grid">
+        <!-- Immigration -->
+        <div class="practice-card">
+          <div class="practice-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Immigration Law</h3>
+          <div class="practice-scope">Florida &amp; Nationwide</div>
+          <p>Creative immigration strategies to navigate complex cases. We seek every legal avenue to achieve your desired result, whether you're seeking family reunification, business visas, or deportation defense.</p>
+          <ul class="practice-list">
+            <li>Family Sponsorships</li>
+            <li>Naturalization</li>
+            <li>Business &amp; Employment Visas</li>
+            <li>Investment Visas (EB-5)</li>
+            <li>Deportation Defense</li>
+            <li>Asylum</li>
+            <li>Consular Processing</li>
+            <li>DACA / Deferred Action</li>
+            <li>Waivers</li>
+          </ul>
+        </div>
+
+        <!-- Traffic -->
+        <div class="practice-card">
+          <div class="practice-icon">
+            <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 5.5 20 15.5 16 13 16 8"/><line x1="1" y1="20" x2="23" y2="20"/><line x1="5" y1="16" x2="5" y2="20"/><line x1="19" y1="16" x2="19" y2="20"/></svg>
+          </div>
+          <h3>Traffic Law</h3>
+          <div class="practice-scope">All 50 States</div>
+          <p>Defending drivers &mdash; including CDL/commercial operators &mdash; against traffic citations, DOT violations, and license point accumulation. We fight to protect your driving record and livelihood.</p>
+          <ul class="practice-list">
+            <li>Traffic Citations</li>
+            <li>CDL / Commercial Defense</li>
+            <li>DOT Violations</li>
+            <li>Point Reduction</li>
+            <li>License Suspension</li>
+            <li>Trucking Company Defense</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Credentials ═══ -->
+  <section class="section section--dark" id="credentials">
+    <div class="section-inner">
+      <div class="section-label" style="text-align:center">Why Choose Us</div>
+      <h2 class="section-title" style="text-align:center">Credentials That Matter</h2>
+      <div class="section-rule" style="margin-left:auto;margin-right:auto"></div>
+      <p class="section-desc" style="text-align:center;margin-left:auto;margin-right:auto">When choosing legal representation, credentials and experience make all the difference. Attorney Yelen brings decades of proven expertise.</p>
+
+      <div class="credentials-grid">
+        <div class="credential">
+          <div class="credential-value">25+</div>
+          <div class="credential-label">Years of Practice</div>
+          <div class="credential-detail">Licensed since 1996</div>
+        </div>
+        <div class="credential">
+          <div class="credential-value">AV</div>
+          <div class="credential-label">Peer Review Rated</div>
+          <div class="credential-detail">Highest distinction</div>
+        </div>
+        <div class="credential">
+          <div class="credential-value">5.0</div>
+          <div class="credential-label">Avvo Rating</div>
+          <div class="credential-detail">Based on 67 reviews</div>
+        </div>
+        <div class="credential">
+          <div class="credential-value">2</div>
+          <div class="credential-label">Languages</div>
+          <div class="credential-detail">English &amp; Espa&ntilde;ol</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ About ═══ -->
+  <section class="section section--cream" id="about">
+    <div class="section-inner">
+      <div class="section-label">About the Firm</div>
+      <h2 class="section-title">Howard Y. Yelen, Esq.</h2>
+      <div class="section-rule"></div>
+
+      <div class="about-grid">
+        <div class="about-details">
+          <p>Howard Y. Yelen is the founder and principal attorney of Yelen Law Offices, P.A., a Weston-based firm dedicated to providing high-quality legal representation in immigration and traffic law.</p>
+
+          <p>A graduate of St. Thomas University School of Law and a member of the Florida Bar since 1996, Attorney Yelen has spent over two decades helping individuals, families, and businesses navigate the complexities of U.S. immigration law. His practice also extends nationwide in traffic defense, with particular expertise representing CDL holders and commercial trucking companies.</p>
+
+          <blockquote class="about-quote">
+            &ldquo;We employ creative immigration strategies &mdash; seeking creative, but legal, means to get desired results. Every client is treated like family, not a case number.&rdquo;
+          </blockquote>
+
+          <p>As a longstanding member of the American Immigration Lawyers Association (AILA) and a former member of the Florida Bar Grievance Committee, Attorney Yelen maintains the highest standards of professional ethics and legal excellence.</p>
+        </div>
+
+        <aside class="about-sidebar">
+          <h4>Attorney Profile</h4>
+          <dl>
+            <div class="about-item">
+              <dt>Education</dt>
+              <dd>St. Thomas University School of Law</dd>
+            </div>
+            <div class="about-item">
+              <dt>Bar Admission</dt>
+              <dd>Florida Bar &mdash; October 1996</dd>
+            </div>
+            <div class="about-item">
+              <dt>AILA Membership</dt>
+              <dd class="gold">Member Since 2002</dd>
+            </div>
+            <div class="about-item">
+              <dt>Peer Review</dt>
+              <dd class="gold">AV Rated (2019)</dd>
+            </div>
+            <div class="about-item">
+              <dt>Languages</dt>
+              <dd>English &amp; Spanish</dd>
+            </div>
+            <div class="about-item">
+              <dt>Professional Service</dt>
+              <dd>FL Bar Grievance Committee</dd>
+            </div>
+            <div class="about-item">
+              <dt>Payment</dt>
+              <dd>Cash, Check, Credit Card</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Contact ═══ -->
+  <section class="section" id="contact">
+    <div class="section-inner" style="text-align:center">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Schedule a Consultation</h2>
+      <div class="section-rule" style="margin-left:auto;margin-right:auto"></div>
+      <p class="section-desc" style="margin-left:auto;margin-right:auto">We accommodate all financial situations with reasonable rates. Contact us today to discuss your case.</p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="contact-card-label">Phone</div>
+          <a href="tel:+19542284466" class="contact-phone">(954) 228-4466</a>
+          <p class="contact-sub">Monday &ndash; Friday, 9:00 AM &ndash; 5:00 PM</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-card-label">Office</div>
+          <p class="contact-detail">
+            2645 Executive Park Drive<br>
+            Weston, Florida 33331
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-card-label">Email</div>
+          <a href="mailto:info@browardimmigrationlaw.com" class="contact-detail">info@browardimmigrationlaw.com</a>
+        </div>
+      </div>
+
+      <div class="contact-lang">
+        <strong>Se Habla Espa&ntilde;ol</strong> &mdash; Bilingual Services Available
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Yelen Law Offices, P.A.</div>
+      <p class="footer-disclaimer">
+        The information on this website is for general informational purposes only. Nothing on this site should be taken as legal advice for any individual case or situation. This information is not intended to create, and receipt or viewing does not constitute, an attorney-client relationship. Prior results do not guarantee a similar outcome. Howard Y. Yelen is licensed to practice law in the State of Florida.
+      </p>
+      <p class="footer-copy">&copy; {{ now.Year }} Yelen Law Offices, P.A. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
